@@ -1,0 +1,27 @@
+:root {
+  --from: #FF512F;
+  --to: #DD2476;
+}
+
+body {
+  margin: 0px;
+  font-family: "Leckerli One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-image: linear-gradient(to bottom right, var(--from), var(--to));
+  height: 100vh;
+  width: 100vw;
+}
+
+#title {
+  padding: 1rem;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  background: -webkit-linear-gradient(#FDFCFB, #E2D1C3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

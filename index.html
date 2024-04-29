@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sparkly blue</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <script>
+    // Randomise background gradient
+    const bgGradients = [
+      ['#FF512F', '#DD2476'],
+      ['#FF61D2', '#FE9090'],
+      ['#72FFB6', '#10D164'],
+      ['#FD8451', '#FFBD6F'],
+      ['#009245', '#FCEE21'],
+      ['#0100EC', '#FB36F4'],
+      ['#FDABDD', '#374A5A'],
+      ['#5761B2', '#1FC5A8'],
+      ['#FF3E9D', '#0E1F40'],
+    ];
+    const index = Math.floor(Math.random() * bgGradients.length);
+    const root = document.querySelector(':root');
+    root.style.setProperty('--from', bgGradients[index][0]);
+    root.style.setProperty('--to', bgGradients[index][1]);
+  </script>
+  <div id="title">sparkly blue</div>
+</body>
+
+</html>
