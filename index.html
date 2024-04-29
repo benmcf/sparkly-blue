@@ -20,14 +20,25 @@
       ['#FD8451', '#FFBD6F'],
       ['#009245', '#FCEE21'],
       ['#0100EC', '#FB36F4'],
-      ['#FDABDD', '#374A5A'],
       ['#5761B2', '#1FC5A8'],
-      ['#FF3E9D', '#0E1F40'],
+      ['#D16BA5', '#86A8E7', '#5FFBF1'],
+      ['#FF512F', '#DD2476', 'pink'],
+      ['#FF61D2', '#FE9090', 'pink'],
+      ['#FD8451', '#FFBD6F', 'pink'],
+      ['#5761B2', '#1FC5A8', 'pink'],
     ];
+    // Generate a random integer between zero and the number of gradients minus one
     const index = Math.floor(Math.random() * bgGradients.length);
     const root = document.querySelector(':root');
-    root.style.setProperty('--from', bgGradients[index][0]);
-    root.style.setProperty('--to', bgGradients[index][1]);
+    let colourList = '';
+    // Get the list of colours at bgGradients[index] and format it for updating the CSS variable
+    for (i = 0; i < bgGradients[index].length; i ++) {
+      colourList += bgGradients[index][i];
+      if (i < bgGradients[index].length - 1) {
+        colourList += ',';
+      }
+    };
+    root.style.setProperty('--bg-gradient', colourList);
   </script>
   <div id="title">sparkly blue</div>
 </body>
